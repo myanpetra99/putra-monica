@@ -6,13 +6,13 @@
 .about-couple {
   color: black;
 
-  background-color:rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.about-couple::before {    
+.about-couple::before {
   content: "";
   position: absolute;
-  background-image: url(./assets/_.jpeg);
+  background-image: url(/_.jpeg);
   background-position: center;
   background-size: cover;
   top: 0px;
@@ -22,12 +22,15 @@
   opacity: 0.2;
 }
 
-
+.text-smaller {
+  font-size: 0.8em;
+}
 
 .hero {
+  padding-top: 2em;
   min-width: 100%;
   min-height: 70vh;
-  background-image: url(./assets/hero.jpeg);
+  background-image: url(/hero.jpg);
   background-size: cover;
   background-position: center;
   margin-bottom: -200px;
@@ -44,21 +47,71 @@
   width: 100%;
   top: 0;
   z-index: 999999;
-  position: fixed ;
+  position: fixed;
   height: 100vh;
 }
 
 .hero-content {
-  background: rgb(255,255,255);
-  background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 100%);
-  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 100%);
+  padding-top: 1.3em;
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 1) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
   position: relative;
   z-index: 999;
   height: 100%;
 }
 
+.music-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.music-icon:hover {
+  transform: rotate(180deg);
+}
+
+.music-control {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  z-index: 9999999;
+  color: black;
+  transform: scale(1.8);
+}
+
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #ef3349;
+  z-index: 9999999;
+}
 
 @keyframes logo-spin {
   from {
@@ -81,26 +134,25 @@
 
 @font-face {
   font-family: alsscript;
-  src: url(./assets/font/alsscrp.ttf);
+  src: url(/font/alsscrp.ttf);
 }
-h1{
+h1 {
   font-family: alsscript;
 }
 
-
 @font-face {
   font-family: didot;
-  src: url(./assets/font/GFSDidot-Regular.ttf);
+  src: url(/font/GFSDidot-Regular.ttf);
 }
-h2{
+h2 {
   font-family: didot;
 }
 
 @font-face {
   font-family: forum;
-  src: url(./assets/font/Forum-Regular.ttf);
+  src: url(/font/Forum-Regular.ttf);
 }
-h3{
+h3 {
   font-family: forum;
 }
 
@@ -138,14 +190,18 @@ h3{
   height: 100vh;
 }
 
+.content1 {
+  padding-top: 4em;
+}
+
 .content {
   position: relative;
   min-height: fit-content;
   z-index: 99;
-  padding-top: 4em;
   padding-bottom: 4em;
   background-color: whitesmoke;
   border: none;
+  overflow: hidden;
 }
 
 .margin-top {
@@ -157,16 +213,18 @@ h3{
   position: relative;
   min-width: 100%;
   min-height: 100%;
-  background-image: url(./assets/hero2.jpeg);
+  background-image: url(/hero2.jpg);
+
   background-position: center;
   background-size: cover;
 }
 @keyframes scrollAnimation {
-  0%, 100% {
-      transform: translateY(0);
+  0%,
+  100% {
+    transform: translateY(0);
   }
   50% {
-      transform: translateY(5px);
+    transform: translateY(5px);
   }
 }
 .scroll-wheel {
@@ -190,7 +248,8 @@ h3{
 
 .gallery {
   color: black;
-  background-color: #F6F1EE;
+  background-color: #f6f1ee;
+  overflow: hidden;
 }
 
 .gallery-container {
@@ -208,7 +267,7 @@ h3{
 .gallery::before {
   content: "";
   position: absolute;
-  background-image: url(./assets/bg_3.webp);
+  background-image: url(/bg_3.webp);
   background-position: center;
   background-size: cover;
   top: 0px;
@@ -221,25 +280,24 @@ h3{
 .wedding-schedule-container {
   max-width: 100%;
   padding: 20px;
-  background-color: rgb(163, 66, 39);
+  background-color: #fff2d8;
+  color: gray;
 }
 
-
 .schedule {
-  border: 1px dashed white;
+  border: 1px solid gray;
   margin: 10px;
   padding: 10px;
 }
 
-
-
 .btn-invisible {
-  border: 1px solid white;
-  color: white;
+  border: 1px solid gray;
+  color: gray;
   background-color: transparent;
   cursor: pointer;
   border-radius: 30px;
   padding: 10px;
+  margin: 5px;
 }
 
 .btn-invisible-black {
@@ -267,11 +325,28 @@ h3{
   height: auto;
   margin-bottom: 10px;
   transition: opacity 0.5s;
-    opacity: 1;
+  opacity: 1;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-gray {
+  color: gray;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .fade-out {
   opacity: 0;
+  transition: opacity 1s ease-out;
 }
 
 .thumbnails {
@@ -306,9 +381,8 @@ h3{
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: #FFF2D8;
+  background-color: #fff2d8;
   color: gray;
-  border: 1px  black dotted;
 }
 
 .gift-description {
@@ -324,8 +398,8 @@ h3{
   justify-content: center;
   padding: 20px;
   background-color: #113946;
-  color: #FFF2D8;
-  border: 1px  black dotted;
+  color: #fff2d8;
+  border: 1px black dotted;
 }
 
 .bank {
@@ -348,12 +422,11 @@ h3{
   height: 400px; /* Adjust height based on your preference */
   overflow-y: scroll; /* Makes the container scrollable */ /* Set to maximum width, adjust if needed */
   border: 1px solid #ccc; /* Optional, just to visually separate the container */
-  padding: 20px; 
+  padding: 20px;
   text-align: left;
   background-color: #113946;
   width: 70%;
 }
-
 
 .detail-name {
   color: gold;
@@ -364,7 +437,6 @@ h3{
   display: flex;
   justify-content: left;
   align-items: center;
-  
 }
 
 .message-initial {
@@ -373,8 +445,8 @@ h3{
   padding-right: 10px;
   font-size: 0.4em;
   min-width: 30px;
-  border-right: 1px solid #F5E8B7;
-  color: #F5E8B7;
+  border-right: 1px solid #f5e8b7;
+  color: #f5e8b7;
 }
 
 .detail-message {
@@ -390,15 +462,13 @@ h3{
   justify-items: center;
 }
 
-
-
 .form-control {
   border: 1px solid #ffe6b3;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
   color: rgb(58, 44, 19);
-  background-color: #FFF2D8;
+  background-color: #fff2d8;
 }
 
 .wishes-form {
@@ -440,8 +510,6 @@ h3{
   background-color: #ededed;
 }
 
-
-
 .rsvp {
   background-color: #ebebeb;
   border-radius: 10px;
@@ -449,3 +517,53 @@ h3{
   width: 80%;
 }
 
+.spinning-disc {
+  animation: spin 4s linear infinite;
+}
+
+.stop-disc {
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bible-quote {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: didot;
+  text-align: center;
+  margin: 10px;
+}
+
+.content2 {
+  background-color: #0000007a;
+  height: 100vh;
+}
+
+.music-control svg {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.minus-top {
+  margin-top: -2.1em;
+}
+
+.minus-top2 {
+  margin-top: -0.3em;
+}
+
+.minus-bot {
+  margin-bottom: -0.1em;
+}

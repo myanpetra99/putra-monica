@@ -1,7 +1,8 @@
 {
   "name": "putra-monica",
+  "homepage": "http://putramonica.wearegettingmarried.my.id/",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,6 +16,9 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "aos": "^3.0.0-beta.6",
     "axios": "^1.5.1",
+    "file-saver": "^2.0.5",
+    "ics": "^3.5.0",
+    "ics-js": "^0.10.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0"
