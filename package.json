@@ -15,7 +15,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "aos": "^3.0.0-beta.6",
-    "axios": "^1.5.1",
+    "axios": "^1.6.0",
     "file-saver": "^2.0.5",
     "ics": "^3.5.0",
     "ics-js": "^0.10.2",
